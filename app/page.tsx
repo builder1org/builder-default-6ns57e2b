@@ -1,11 +1,21 @@
+import { About } from "./components/About";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { ProductGrid } from "./components/ProductGrid";
+
 export default function Home() {
   return (
-    <main className="site-main">
-      <h1>Welcome</h1>
-      <p>
-        This is a minimal starter. Content, layout, and styling are created from the builder
-        chat — not from a fixed industry template.
-      </p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <div className="site-main">
+          <Hero />
+          <ProductGrid />
+          <About />
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 }
