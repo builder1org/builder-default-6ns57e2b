@@ -44,14 +44,16 @@ a {
 
 :root {
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+  color-scheme: dark;
 
-  --color-bg: #f7f5f2;
-  --color-surface: #ffffff;
-  --color-text: #1c1a18;
-  --color-muted: #6b6560;
-  --color-border: #e8e4df;
-  --color-accent: #8b7355;
-  --color-accent-dark: #6d5a44;
+  --color-bg: #0c0b0a;
+  --color-surface: #161412;
+  --color-text: #f2efe9;
+  --color-muted: #9c958d;
+  --color-border: #2a2724;
+  --color-accent: #c9ad84;
+  --color-accent-dark: #b8996a;
+  --color-on-accent: #14110d;
 
   --space-page: clamp(1.25rem, 5vw, 2.5rem);
   --max-width: 68rem;
@@ -153,12 +155,13 @@ a {
 }
 
 .btn--primary {
-  background: var(--color-text);
-  color: var(--color-bg);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
 }
 
 .btn--primary:hover {
   background: var(--color-accent-dark);
+  color: var(--color-on-accent);
 }
 
 /* Sections */
@@ -209,15 +212,15 @@ a {
 }
 
 .product-card:hover {
-  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-text) 6%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  box-shadow: 0 12px 32px color-mix(in srgb, #000000 45%, transparent);
 }
 
 .product-card__visual {
   aspect-ratio: 4 / 5;
   background: linear-gradient(
     165deg,
-    color-mix(in srgb, var(--color-bg) 40%, #e9e4dc) 0%,
+    color-mix(in srgb, var(--color-surface) 70%, #252220) 0%,
     var(--color-bg) 100%
   );
   display: flex;
@@ -232,10 +235,12 @@ a {
   border-radius: 0.35rem 0.35rem 0.2rem 0.2rem;
   background: linear-gradient(
     180deg,
-    color-mix(in srgb, var(--color-accent) 25%, #d4cfc8) 0%,
-    color-mix(in srgb, var(--color-text) 15%, #c9c4bc) 100%
+    color-mix(in srgb, var(--color-accent) 35%, #3d3834) 0%,
+    color-mix(in srgb, var(--color-accent) 10%, #1e1c1a) 100%
   );
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-text) 8%, transparent);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--color-accent) 25%, transparent),
+    0 4px 16px color-mix(in srgb, #000000 50%, transparent);
   position: relative;
 }
 
@@ -247,7 +252,7 @@ a {
   transform: translateX(-50%);
   width: 0.85rem;
   height: 0.55rem;
-  background: color-mix(in srgb, var(--color-text) 20%, #b8b3ab);
+  background: color-mix(in srgb, var(--color-accent) 30%, #2a2724);
   border-radius: 2px 2px 0 0;
 }
 
@@ -344,7 +349,7 @@ a {
 }
 
 .site-footer__contact a:hover {
-  color: var(--color-accent-dark);
+  color: var(--color-accent);
 }
 
 .site-footer__copy {

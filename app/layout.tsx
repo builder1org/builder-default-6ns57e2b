@@ -12,6 +12,10 @@ export const metadata = {
   description: "فروشگاه مینیمال عطر و ادکلن اصل — انتخابی برای هر موقعیت",
 };
 
+export const viewport = {
+  themeColor: "#0c0b0a",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fa" dir="rtl">
